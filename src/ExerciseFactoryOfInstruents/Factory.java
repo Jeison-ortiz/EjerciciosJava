@@ -26,4 +26,23 @@ public class Factory {
 		}
 	}
 	
+	public void listInstrumentsForType(ArrayList<Instrument> instruments) {
+		for (Instrument instrument : instruments) {
+			System.out.println(instrument);
+		}
+	}
+	
+	public ArrayList<Instrument> getInstrumentsOfFactoryForType(TypeOfInstrument type) {
+		ArrayList<Instrument> instrumentsOfFactoryForType = new ArrayList<Instrument>();
+		ArrayList<Instrument> instrumentsForBranch = new ArrayList<Instrument>();
+		for (Branch branch : branchs) {
+			instrumentsForBranch = branch.getInstruments();
+			for (Instrument instrument : instrumentsForBranch) {
+				if(instrument.getType() == type) {
+					instrumentsOfFactoryForType.add(instrument);					
+				}
+			}
+		}		
+		return instrumentsOfFactoryForType;
+	}	
 }

@@ -22,6 +22,24 @@ public class Branch {
 		this.instruments.add(instrument);
 	}
 	
+	public ArrayList<Instrument> getInstrumentForType(TypeOfInstrument type) {
+		ArrayList<Instrument> instrumentsForType = new ArrayList<>();
+		for (Instrument instrument : instruments) {
+			if (instrument.getType() == type) {
+				instrumentsForType.add(instrument);
+			}
+		}	
+		return instrumentsForType;
+	}
+	
+	public ArrayList<Instrument> getInstruments() {
+		return instruments;
+	}
+
+	public void setInstruments(ArrayList<Instrument> instruments) {
+		this.instruments = instruments;
+	}
+	
 	public String getName() {
 		return name;
 	}

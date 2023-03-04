@@ -12,6 +12,14 @@ public class Instrument {
 		this.type = type;
 	}
 	
+	public TypeOfInstrument getType() {
+		return type;
+	}
+
+	public void setType(TypeOfInstrument type) {
+		this.type = type;
+	}
+	
 	@Override
 	public String toString() {
 		return "Instrument [id=" + id + ", precio=" + precio + ", type=" + type + "]";

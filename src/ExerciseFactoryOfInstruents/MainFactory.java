@@ -1,12 +1,14 @@
 package ExerciseFactoryOfInstruents;
 
+import java.util.ArrayList;
+
 public class MainFactory {
 
 	public static void main(String[] args) {
 		
 		Factory factory = new Factory();
 		loadFactory(factory);
-		factory.listInstrumentsOfFactory();
+//		factory.listInstrumentsOfFactory();
 	}
 	
 	private static void loadFactory(Factory factory) {
@@ -29,6 +31,8 @@ public class MainFactory {
 		
 		factory.addBranch(branch1);
 		factory.addBranch(branch2);
+		factory.listInstrumentsForType(factory.getInstrumentsOfFactoryForType(TypeOfInstrument.PERCUSSION));
+		
 	}
 
 }
