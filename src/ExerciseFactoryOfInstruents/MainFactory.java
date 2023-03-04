@@ -8,7 +8,7 @@ public class MainFactory {
 		
 		Factory factory = new Factory();
 		loadFactory(factory);
-//		factory.listInstrumentsOfFactory();
+		factory.listInstrumentsOfFactory();
 	}
 	
 	private static void loadFactory(Factory factory) {
@@ -29,9 +29,12 @@ public class MainFactory {
 		branch2.addInstruent(new Instrument("abcde",18D, TypeOfInstrument.ROPE));
 		branch2.addInstruent(new Instrument("abcdef",132D, TypeOfInstrument.PERCUSSION));
 		
+	
 		factory.addBranch(branch1);
 		factory.addBranch(branch2);
-		factory.listInstrumentsForType(factory.getInstrumentsOfFactoryForType(TypeOfInstrument.PERCUSSION));
+		factory.deleteInstrument("A");
+//		factory.listInstrumentsForType(factory.getInstrumentsOfFactoryForType(TypeOfInstrument.PERCUSSION));
+		
 		
 	}
 

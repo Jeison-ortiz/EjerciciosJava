@@ -32,6 +32,7 @@ public class Branch {
 		return instrumentsForType;
 	}
 	
+	
 	public ArrayList<Instrument> getInstruments() {
 		return instruments;
 	}
@@ -42,5 +43,24 @@ public class Branch {
 	
 	public String getName() {
 		return name;
+	}
+
+	public Instrument deleteInstrument(String id) {
+		Instrument intrumentFined = findInstrumentForId(id);
+		this.instruments.remove(intrumentFined);
+		return intrumentFined;
+	}
+	
+	private Instrument findInstrumentForId(String id) {
+		Instrument instrumentFined = null;
+		int i = 0;
+		while(i < instruments.size() && !this.instruments.get(i).getId().equals(id)){
+			i++;	
+		}
+
+		if(i < this.instruments.size()) {
+			instrumentFined = this.instruments.get(i);
+		}
+		return instrumentFined;
 	}
 }

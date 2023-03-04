@@ -44,5 +44,15 @@ public class Factory {
 			}
 		}		
 		return instrumentsOfFactoryForType;
-	}	
+	}
+	
+	public Instrument deleteInstrument(String id) {
+		Instrument instrumentDelete = null;
+		int i = 0;
+		while(i< branchs.size() && instrumentDelete == null) {
+			instrumentDelete = branchs.get(i).deleteInstrument(id);
+			i++;
+		}
+		return instrumentDelete;
+	}
 }

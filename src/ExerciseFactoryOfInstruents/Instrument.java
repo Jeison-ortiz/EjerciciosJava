@@ -20,6 +20,14 @@ public class Instrument {
 		this.type = type;
 	}
 	
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	public String getId() {
+		return id;
+	}
+	
 	@Override
 	public String toString() {
 		return "Instrument [id=" + id + ", precio=" + precio + ", type=" + type + "]";
