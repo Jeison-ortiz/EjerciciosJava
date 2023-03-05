@@ -1,7 +1,5 @@
 package ExerciseFactoryOfInstruents;
 
-import java.util.ArrayList;
-
 public class MainFactory {
 
 	public static void main(String[] args) {
