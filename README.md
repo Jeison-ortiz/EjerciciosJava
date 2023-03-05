@@ -12,6 +12,7 @@ alfanumérico, su precio y su tipo (Percusión, Viento o Cuerda).
 *Puntos a desarrollar
 ### 1.
 Crear un proyecto en Java que resuelva:
+
 A) La explotación del método listarInstrumentos que muestre en la consola todos los
 datos de cada uno de los instrumentos.
 
