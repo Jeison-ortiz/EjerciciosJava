@@ -36,8 +36,8 @@ public class MainFactory {
 	
 		factory.addBranch(branch1);
 		factory.addBranch(branch2);
-//		factory.deleteInstrument("A");
-//		factory.listInstrumentsForType(factory.getInstrumentsOfFactoryForType(TypeOfInstrument.PERCUSSION));
+		factory.deleteInstrument("A");
+		factory.listInstrumentsForType(factory.getInstrumentsOfFactoryForType(TypeOfInstrument.PERCUSSION));
 		
 		
 	}
