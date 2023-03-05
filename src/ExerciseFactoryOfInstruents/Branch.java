@@ -1,6 +1,7 @@
 package ExerciseFactoryOfInstruents;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Branch {
 	
@@ -62,5 +63,22 @@ public class Branch {
 			instrumentFined = this.instruments.get(i);
 		}
 		return instrumentFined;
+	}
+
+	public double[] percentageInstrumentForType() {
+		
+		final int numberOfInstrumentTypes = TypeOfInstrument.values().length;
+		double[] percentages = new double[numberOfInstrumentTypes];
+		for (Instrument instrument : instruments) {
+			percentages[instrument.getType().ordinal()]++;
+		}
+		calculePercenyage(percentages);
+		return percentages;
+	}
+	
+	public void calculePercenyage(double[] percentages) {
+		for(int i = 0; i < percentages.length;i++) {
+			percentages[i] = 100*percentages[i]/instruments.size();
+		} 
 	}
 }

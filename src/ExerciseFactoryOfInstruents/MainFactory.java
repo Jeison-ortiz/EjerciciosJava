@@ -8,7 +8,11 @@ public class MainFactory {
 		
 		Factory factory = new Factory();
 		loadFactory(factory);
-		factory.listInstrumentsOfFactory();
+//		factory.listInstrumentsOfFactory();
+		double[] percentageForTypefactory = factory.percentageInstrumentForType("sucursal 1");
+		for(int i=0; i<percentageForTypefactory.length;i++) {
+			System.out.println(percentageForTypefactory[i]);
+		}
 	}
 	
 	private static void loadFactory(Factory factory) {
@@ -32,7 +36,7 @@ public class MainFactory {
 	
 		factory.addBranch(branch1);
 		factory.addBranch(branch2);
-		factory.deleteInstrument("A");
+//		factory.deleteInstrument("A");
 //		factory.listInstrumentsForType(factory.getInstrumentsOfFactoryForType(TypeOfInstrument.PERCUSSION));
 		
 		

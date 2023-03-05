@@ -55,4 +55,26 @@ public class Factory {
 		}
 		return instrumentDelete;
 	}
+	
+	public double[] percentageInstrumentForType(String nameBranch) {
+		double[] percentages = null;
+		Branch branchFined = findBranch(nameBranch);
+		if(branchFined != null) {
+			percentages = branchFined.percentageInstrumentForType();
+		}
+		return percentages;
+	}
+	
+	private Branch findBranch(String nameBranch) {
+		Branch branchFined = null;
+		int i = 0;
+		while(i < branchs.size() && !this.branchs.get(i).getName().equals(nameBranch)){
+			i++;	
+		}
+
+		if(i < this.branchs.size()) {
+			branchFined = this.branchs.get(i);
+		}
+		return branchFined;
+	}
 }
