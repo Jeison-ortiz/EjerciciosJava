@@ -32,5 +32,39 @@ public class CountinSortMatriz {
 		   return Arrays.asList (arreglo);
 		   
 	   }
+	   
+	   
+	    public static void findZigZagSequence(int [] a, int n){
+	        Arrays.sort(a);
+	      
+	        int mid = (n + 1)/2;
+	        int temp = a[mid-1];
+	        a[mid-1] = a[n - 1];
+	        a[n - 1] = temp;
+	     //   System.out.println("Mid: "+mid +"temp: " + temp);
+	    
+	        int st = mid;
+	        int ed = n - 2;
+	      //  System.out.println("st: "+st +"ed: " + ed);
+	        for(int i = 0; i < n; i++){    
+	      //      System.out.print(a[i]);
+	        }
+	      //  System.out.println("melo");
+	        while(st <= ed){
+	            temp = a[st];
+	            a[st] = a[ed];
+	            a[ed] = temp;
+	            st = st + 1;
+	            ed = ed - 1;
+	       //     System.out.println("--");
+	       //     System.out.println("st: "+st +"ed: " + ed);
+	        }
+	     //   System.out.println("st: "+st +"ed: " + ed);
+	        for(int i = 0; i < n; i++){
+	            if(i > 0) System.out.print(" ");
+	            System.out.print(a[i]);
+	        }
+	        System.out.println();
+	    }
 
 }
